@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en"; body style="background-color: #fbf5e4;">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Charity: Water</title>
+  
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+  <style>
+    body { 
+      margin: 0; 
+      font-family: 'Montserrat', sans-serif; 
+      color: #333;
+      background-color: #fbf5e4; 
+    }
+
+    a { text-decoration: none; font-family: 'Montserrat', sans-serif; }
+
+    header { 
+      background: #0071bc; 
+      color: #fff; 
+      display: flex; 
+      align-items: center; 
+      padding: 10px 40px; 
+      justify-content: space-between; 
+      font-family: 'Montserrat', sans-serif; 
+      height: 70px;
+      box-sizing: border-box;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      z-index: 100;
+    }
+
+    nav a { margin: 0 15px; color: #FFC90A; font-weight: 600; }
+
+    .search-box { background: rgba(255,255,255,0.2); padding: 5px 10px; border-radius: 20px; display: flex; align-items: center; }
+    .search-box input { border: none; background: transparent; color: white; outline: none; font-family: 'Montserrat', sans-serif; }
+
+    /* Website Images */
+    .top-section {
+      display: flex;
+      margin-top: 70px; /* same as header height */
+    }
+
+    .hero {
+      display: flex;
+      width: calc(100% - 250px); 
+    }
+
+    .hero-img {
+      width: 50%;
+      height: 430px;
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: center center;
+    }
+
+    /* Fixed Sidebar */
+    .merged-sidebar {
+      position: fixed;
+      right: 0;
+      top: 70px; /* header height */
+      width: 250px;
+      height: calc(100% - 70px); /* full height minus header */
+      background: #e7f2fa;
+      text-align: center;
+      padding: 40px 20px;
+      overflow-y: auto;
+      box-shadow: -4px 0 10px rgba(0,0,0,0.1);
+      z-index: 10;
+    }
+    
+
+    .merged-sidebar h2 { font-size: 22px; margin: 10px 0; font-weight: 700; }
+    .merged-sidebar p { margin-top: 10px; font-style: italic; font-weight: 300; }
+    .merged-sidebar strong { font-weight: 600; }
+    /* Add spacing between follow text and icons */
+    .merged-sidebar .social { margin-top: 15px; /* Adjust space as needed */}
+    
+    .social img { width: 30px; height: 30px; margin: 0 8px; transition: transform 0.2s; }
+    .social img:hover { transform: scale(1.2); }
+    hr { margin: 20px 0; border: none; border-top: 1px solid #ccc; }
+
+    .content {
+      padding: 50px;
+      max-width: 70%;
+    }
+
+    h1 { font-size: 32px; margin-bottom: 15px; font-weight: 700; }
+    h1 span { color: #0071bc; }
+    p { font-weight: 300; line-height: 1.5; }
+
+    .buttons a { display: inline-block; padding: 12px 25px; margin-right: 15px; font-weight: 600; border-radius: 4px; }
+    .btn-primary { background: #0071bc; color: #fbf5e4; }
+    .btn-secondary { background: #2b2b4d; color: #fbf5e4; }
+
+    /* Responsive */
+    @media (max-width: 1024px) {
+      .merged-sidebar { width: 200px; padding: 20px; }
+      .hero-img { height: 250px; }
+    }
+
+    @media (max-width: 768px) {
+      .top-section { flex-direction: column; }
+      .merged-sidebar { position: relative; width: 100%; top: 0; height: auto; box-shadow: none; }
+      .content { max-width: 100%; }
+    }
+
+  </style>
+</head>
+<body>
+
+<header>
+  <div class="logo">
+    <img src="assets/water_logo.png" alt="Charity Water Logo" height="50">
+  </div>
+  <nav>
+    <a href="#">HOME</a>
+    <a href="#">OUR WORK</a>
+    <a href="#">CONTACT</a>
+  </nav>
+  <div class="search-box">
+    <input type="text" placeholder="Search..." />
+    <img src="assets/zoom_icon.png" alt="glass" width="16" height="16">
+  </div>
+</header>
+
+<div class="top-section">
+  <div class="hero">
+    <div class="hero-img" style="background-image: url('assets/Nepal.jpg');"></div>
+    <div class="hero-img" style="background-image: url('assets/Ethiopia.jpg');"></div>
+  </div>
+</div>
+
+<div class="merged-sidebar" id="sidebar">
+  <div><img src="assets/hand.png" alt="hand" width="100" height="100"></div>
+  <h2>2.2 billion people<br>lack access to safe<br>drinking water</h2>
+  <p>Countless people without water are in need,<br>it’s time to make <strong>your impact.</strong></p>
+  <hr>
+  
+  <!-- Follow text -->
+  <div class="follow-text">Follow us on<br><strong>@charitywater</strong></div>
+  
+  <!-- Social icons with spacing -->
+  <div class="social">
+    <a href="#"><img src="assets/insta_icon.png" alt="Instagram"></a>
+    <a href="#"><img src="assets/tiktok_icon.png" alt="TikTok"></a>
+    <a href="#"><img src="assets/twitter_icon.png" alt="Twitter"></a>
+  </div>
+</div>
+
+<div class="content">
+  <h1><span style="color: #397cb6;">Cleaner</span> <span style="color: #222556;">Hydration, <span style="color: #397cb6;">Healthier</span> Nations.</span></h1>
+  <p>
+    Charity: Water is a non-profit organization committed to creating systematic change by helping create clean water sources, increasing jobs, and spreading awareness about
+    the global water crisis.
+  </p>
+  <div class="buttons">
+    <a href="#" class="btn-primary">TAKE ACTION</a>
+    <a href="#" class="btn-secondary">LEARN MORE</a>
+  </div>
+</div>
+
+</body>
+</html>
